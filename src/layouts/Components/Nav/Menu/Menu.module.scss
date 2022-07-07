@@ -1,0 +1,12 @@
+.menu-item {
+    margin-left: 18px;
+
+    &.active {
+        color: var(--white);
+    }
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
