@@ -1,0 +1,25 @@
+.wrapper {
+    position: relative;
+}
+
+.intro {
+}
+
+.info {
+    position: relative;
+    bottom: 35%;
+    left: 4%;
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.desc {
+    font-size: 1.2rem;
+}

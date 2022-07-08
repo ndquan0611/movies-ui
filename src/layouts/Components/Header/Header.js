@@ -43,18 +43,26 @@ function Header() {
 
                 <div className={cx('action')}>
                     <button className={cx('action-btn')}>
-                        <SearchIcon />
+                        <div className={cx('search')}>
+                            <SearchIcon className={cx('search-btn')} />
+                            <input placeholder="Phim, diễn viên, thể loại..." />
+                        </div>
                     </button>
 
-                    <Link to={config.routes.home}>Trẻ em</Link>
+                    <button className={cx('action-btn')}>
+                        <Link to={config.routes.home}>Trẻ em</Link>
+                    </button>
 
                     <button className={cx('action-btn')}>
                         <BellIcon />
+                        <span className={cx('badge')}>5</span>
                     </button>
 
-                    <Link to={config.routes.home}>
-                        <img src="https://occ-0-395-58.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229" />
-                    </Link>
+                    <img
+                        className={cx('user-avatar')}
+                        src="https://occ-0-395-58.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229"
+                        alt="avatar"
+                    />
                 </div>
             </div>
         </header>
