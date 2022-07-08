@@ -1,13 +1,18 @@
 .wrapper {
     position: relative;
+    padding-top: 56%;
 }
 
 .intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    user-select: none;
 }
 
 .info {
-    position: relative;
-    bottom: 35%;
+    position: absolute;
+    bottom: 36%;
     left: 4%;
     width: 36%;
     display: flex;
@@ -17,9 +22,17 @@
 }
 
 .title {
-    font-size: 3rem;
+    margin-bottom: 1.2rem;
 }
 
 .desc {
-    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+    color: var(--white);
+}
+
+.info-btn {
+    margin-top: 2rem;
 }

@@ -1,5 +1,7 @@
 import classNames from 'classnames/bind';
 import ReactPlayer from 'react-player';
+import Button from '~/components/Button';
+import { NoficationIcon, PlayIcon } from '~/components/Icons';
 import styles from './Banner.module.scss';
 
 const cx = classNames.bind(styles);
@@ -17,11 +19,25 @@ function Banner() {
                 className={cx('intro')}
             />
             <div className={cx('info')}>
-                <h1 className={cx('title')}>Jurassic World Dominion</h1>
+                <img
+                    title="Quái vật biển khơi"
+                    src="https://occ-0-395-58.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABRvppcW3lzSU0k0PJENx-kkFXyEm00eRzf8Z2QidNqQzfNna7R_JRNtlarkun5d5Y5DyQI2Ic0g34rqFDftrQeFcDNUwe9jYLl2ZlDJeFsX7bRnl5ShZcoj14eUg_tYsnGrYc3iapPSi3HtSizSYeyjwpjXO6lQUOcKNozYdL7LzGXQinzg_rQ.webp?r=ec6"
+                    alt=""
+                    className={cx('title')}
+                />
                 <p className={cx('desc')}>
-                    The Red Ribbon Army, an evil organization that was once destroyed by Goku in the
-                    past, has been reformed by a group of people who have created new an ...
+                    Khi một cô bé lẻn lên tàu của một thợ săn quái vật biển huyền thoại, họ bắt đầu
+                    cuộc hành trình hoành tráng vào vùng biển chưa được khám phá – và làm nên lịch
+                    sử.
                 </p>
+                <div className={cx('info-btn')}>
+                    <Button primary leftIcon={<PlayIcon />}>
+                        Phát
+                    </Button>
+                    <Button secondary leftIcon={<NoficationIcon />}>
+                        Thông tin khác
+                    </Button>
+                </div>
             </div>
         </div>
     );
