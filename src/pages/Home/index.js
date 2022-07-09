@@ -1,5 +1,7 @@
+import Contents from '~/layouts/Components/Contents';
+
 function Home() {
-    return <h2>Home Page</h2>;
+    return <Contents />;
 }
 
 export default Home;
