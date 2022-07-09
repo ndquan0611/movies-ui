@@ -1,37 +1,21 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
-import styles from './Header.module.scss';
-import config from '~/config';
+import { Link } from 'react-router-dom';
 import images from '~/assets/images';
-import Nav from '~/layouts/Components/Nav';
 import { BellIcon, SearchIcon } from '~/components/Icons';
+import config from '~/config';
+import useScrollY from '~/hooks/useScrollY';
+import Nav from '~/layouts/Components/Nav';
+import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
 
 function Header() {
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    const scrollY = useScrollY();
 
     return (
         <header
             className={cx('wrapper', {
-                scroll: isScrolled,
+                scroll: scrollY,
             })}
         >
             <div className={cx('inner')}>

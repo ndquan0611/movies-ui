@@ -1,20 +1,23 @@
-import classNames from 'classnames/bind';
+import { useState } from 'react';
 import ReactPlayer from 'react-player';
+import classNames from 'classnames/bind';
+import { NotificationIcon, PlayIcon, UnVolumeIcon, VolumeIcon } from '~/components/Icons';
 import Button from '~/components/Button';
-import { NoficationIcon, PlayIcon } from '~/components/Icons';
 import styles from './Banner.module.scss';
 
 const cx = classNames.bind(styles);
 
 function Banner() {
+    const [isMuted, setIsMuted] = useState(false);
+
     return (
         <div className={cx('wrapper')}>
             <ReactPlayer
                 playing={true}
                 width="100%"
                 height="100%"
-                volume={1}
-                muted={true}
+                volume={0.1}
+                muted={isMuted}
                 url="https://vimeo.com/273686020"
                 className={cx('intro')}
             />
@@ -34,11 +37,21 @@ function Banner() {
                     <Button primary leftIcon={<PlayIcon />}>
                         Phát
                     </Button>
-                    <Button secondary leftIcon={<NoficationIcon />}>
+                    <Button secondary leftIcon={<NotificationIcon />}>
                         Thông tin khác
                     </Button>
                 </div>
             </div>
+            {isMuted ? (
+                <button className={cx('banner-btn')} onClick={() => setIsMuted((prev) => !prev)}>
+                    <UnVolumeIcon />
+                </button>
+            ) : (
+                <button className={cx('banner-btn')} onClick={() => setIsMuted((prev) => !prev)}>
+                    <VolumeIcon />
+                </button>
+            )}
+            <div className={cx('fade')}></div>
         </div>
     );
 }

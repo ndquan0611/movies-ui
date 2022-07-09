@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     background-color: transparent;
+    transition: 0.3s ease;
 
     &.scroll {
         background-color: #141414;
