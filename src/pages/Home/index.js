@@ -1,4 +1,4 @@
-import Contents from '~/layouts/Components/Contents';
+import Contents from '~/layouts/Components/Contents/Contents';
 
 function Home() {
     return <Contents />;
